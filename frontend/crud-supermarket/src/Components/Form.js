@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const Form=styled.form`
+export const Container=styled.form`
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
   background-color:${({ theme }) => theme.COLORS.WHITE};
@@ -29,11 +30,10 @@ export const Input=styled.input`
 
 export const Button = styled.button`
   height: 42px;
-  padding: 10px;
+  width: 150px;
   cursor: pointer;
   border-radius: 5px;
   border: none;
   background-color: ${({ theme }) => theme.COLORS.BTN};
   color: ${({ theme })=> theme.COLORS.WHITE};
-
 `;
