@@ -9,17 +9,17 @@ export function Form(){
   return (
     <Container ref={ref}>
       <InputArea>
-        <Label>Id do produto</Label>
+        <Label>Id</Label>
         <Input name="id" type='number' />
       </InputArea>
 
       <InputArea>
-        <Label>Nome do Produto</Label>
+        <Label>Nome</Label>
         <Input name="nome" type='text' />
       </InputArea>
 
       <InputArea>
-        <Label>Quantidade em Estoque</Label>
+        <Label>Qtd </Label>
         <Input name="qtd" type='number' />
       </InputArea>
 
