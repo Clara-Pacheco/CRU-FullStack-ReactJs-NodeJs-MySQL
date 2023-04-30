@@ -1,7 +1,11 @@
+import { Container } from './App.js'
+
 export function App() {
   
   return (
-   <h1>Teste</h1>
+    <Container>
+      <h1>Teste</h1>
+   </Container>
   )
 }
 
