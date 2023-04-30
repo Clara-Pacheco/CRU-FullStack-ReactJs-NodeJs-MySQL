@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useRef } from 'react'
 
-import { Container, InputArea, Label, Input } from './Form.js'
+import { Container, InputArea, Label, Input, Button } from './Form.js'
 
 export function Form(){
   const ref= useRef()
@@ -27,6 +27,8 @@ export function Form(){
         <Label>Seção</Label>
         <Input name="secao" type='text' />
       </InputArea>
+
+      <Button type="submit">SALVAR</Button>
 
 
     </Container>
