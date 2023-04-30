@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useRef } from 'react'
 
-import { Container, InputArea, Label, Input, Button } from './Form.jsx'
+import { Container, InputArea, Label, Input, Button } from './Form.js'
 
 export function Form(){
   const ref= useRef()
