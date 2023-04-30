@@ -14,6 +14,14 @@ export default createGlobalStyle`
       font-weight: 400;
     }
 
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      background-color: ${({ theme })=> theme.COLORS.BG};
+    }
+
     a {
       text-decoration: none;
     }
