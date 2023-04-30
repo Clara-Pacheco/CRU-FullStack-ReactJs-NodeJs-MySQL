@@ -15,3 +15,14 @@ export const InputArea = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const Label=styled.label``;
+
+export const Input=styled.input`
+  width: 120px;
+  padding: 0 10px;
+  border: 1px solid ${({ theme })=> theme.COLORS.INPUT};
+  border-radius: 5px;
+  height: 40px;
+
+`;
