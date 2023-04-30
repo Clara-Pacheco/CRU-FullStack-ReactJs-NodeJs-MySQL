@@ -9,9 +9,9 @@ export const Form=styled.form`
   padding: 20px;
   box-shadow: 0px 0px 5px ${({ theme }) => theme.COLORS.BOX_SHADOW};
   border-radius: 5px;
+`;
 
-
-
-
-
+export const InputArea = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
