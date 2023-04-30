@@ -26,3 +26,14 @@ export const Input=styled.input`
   height: 40px;
 
 `;
+
+export const Button = styled.button`
+  height: 42px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: ${({ theme }) => theme.COLORS.BTN};
+  color: ${({ theme })=> theme.COLORS.WHITE};
+
+`;
