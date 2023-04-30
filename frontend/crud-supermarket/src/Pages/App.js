@@ -9,5 +9,6 @@ export const Container = styled.div`
   align-items: center;
   gap: 10px;
 
-
 `;
+
+export const Title = styled.h2``;
