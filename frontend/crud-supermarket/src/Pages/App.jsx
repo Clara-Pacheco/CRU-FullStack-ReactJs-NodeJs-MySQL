@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 import { Container, Title } from './App.js'
 
 import { toast, ToastContainer } from 'react-toastify'
@@ -6,14 +8,31 @@ import "react-toastify/dist/ReactToastify.css"
 import { Form } from '../Components/Form/Form.jsx'
 import { Grid } from '../Components/Grid/Grid.jsx'
 
+import axios from "axios"
+
 export function App() {
+  const [products, setProducts] = useState([])
+  const [onEdit, setOnEdit] = useState(null)
+
+  const getProducts = async () => {
+    try {
+      const response = await axios.get("http://localhost:8800")
+      setProducts(response.data.sort((a,b) => (a.nome > b.nome ? 1 : -1)))
+    } catch (error) {
+      toast.error(error)
+    }
+  }
+
+  useEffect(() => {
+    getProducts()
+  }, [setProducts])
   
   return (
   <>
     <Container>
       <Title>Produtos</Title>
       <Form />
-      <Grid />
+      <Grid products={products} />
     </Container>
     <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
     
