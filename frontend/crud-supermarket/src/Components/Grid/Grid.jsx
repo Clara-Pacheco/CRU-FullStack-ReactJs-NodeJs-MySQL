@@ -23,14 +23,14 @@ export function Grid({ products }) {
       <Tbody>
         {products.map((item,i)=>(
           <Tr key={i}>
-            <Td width="30%">{item.id}</Td>
+            <Td width="10%">{item.id}</Td>
             <Td width="30%">{item.nome_produto}</Td>
             <Td width="20%">{item.qtd_estoque}</Td>
             <Td width="20%" onlyWeb>{item.secao}</Td>
-            <Td alignCenter width="5%">
+            <Td alignCenter width="8%">
               <FaEdit />
             </Td>
-            <Td alignCenter width="5%">
+            <Td alignCenter width="8%">
               <FaTrash />
             </Td>
           </Tr>
