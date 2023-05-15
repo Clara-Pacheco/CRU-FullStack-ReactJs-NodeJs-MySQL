@@ -13,9 +13,10 @@ export const getProducts = (_, res) => {
 
 export const addProduct = (req, res) => {
   const q = 
-  "INSERT INTO produtos (`nome_produto`,`qtd_estoque`, `secao`) VALUES (?, ?, ?)"
+  "INSERT INTO produtos (`id`,`nome_produto`,`qtd_estoque`, `secao`) VALUES (?)"
 
   const values = [
+    req.body.id,
     req.body.nome_produto,
     req.body.qtd_estoque,
     req.body.secao,
@@ -30,9 +31,10 @@ export const addProduct = (req, res) => {
 
 export const updateProduct = (req, res) => {
   const q =
-    "UPDATE produtos SET `nome_produto` = ?, `qtd_estoque` = ?, `secao` = ? WHERE `id` = ?"
+    "UPDATE produtos SET `id` = ?, `nome_produto` = ?, `qtd_estoque` = ?, `secao` = ? WHERE `id` = ?"
 
   const values = [
+    req.body.id,
     req.body.nome_produto,
     req.body.qtd_estoque,
     req.body.secao
