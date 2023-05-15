@@ -14,13 +14,13 @@ export function Form(){
       </InputArea>
 
       <InputArea>
-        <Label>Nome</Label>
-        <Input name="nome" type='text' />
+        <Label>Nome do Produto</Label>
+        <Input name="nome_produto" type='text' />
       </InputArea>
 
       <InputArea>
-        <Label>Qtd </Label>
-        <Input name="qtd" type='number' />
+        <Label>Qtd em Estoque </Label>
+        <Input name="qtd_estoque" type='number' />
       </InputArea>
 
       <InputArea>
