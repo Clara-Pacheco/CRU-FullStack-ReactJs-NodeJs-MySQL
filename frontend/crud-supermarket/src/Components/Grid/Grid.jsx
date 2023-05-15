@@ -1,9 +1,13 @@
-import { Table, Thead, Tr, Th } from './Grid.js'
+/* eslint-disable no-undef */
+/* eslint-disable react/prop-types */
+import { Table, Thead, Tr, Th, Tbody, Td } from './Grid.js'
 
-// import { FaTrash , FaEdit } from "react-icons/fa"
+import { FaTrash , FaEdit } from "react-icons/fa"
 // import { toast } from "react-toastify"
 
-export function Grid() {
+//import axios from "axios"
+
+export function Grid({ products }) {
   return (
     <Table>
       <Thead>
@@ -16,6 +20,22 @@ export function Grid() {
           <Th></Th>
         </Tr>
       </Thead>
+      <Tbody>
+        {products.map((item,i)=>(
+          <Tr key={i}>
+            <Td width="30%">{item.id}</Td>
+            <Td width="30%">{item.nome_produto}</Td>
+            <Td width="20%">{item.qtd_estoque}</Td>
+            <Td width="20%" onlyWeb>{item.secao}</Td>
+            <Td alignCenter width="5%">
+              <FaEdit />
+            </Td>
+            <Td alignCenter width="5%">
+              <FaTrash />
+            </Td>
+          </Tr>
+        ))}
+      </Tbody>
 
     </Table>
   )
