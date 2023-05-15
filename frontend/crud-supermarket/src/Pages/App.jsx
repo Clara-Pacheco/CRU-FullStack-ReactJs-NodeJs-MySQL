@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react'
 
 import { Container, Title } from './App.js'
@@ -31,8 +32,8 @@ export function App() {
   <>
     <Container>
       <Title>Produtos</Title>
-      <Form />
-      <Grid products={products} />
+      <Form onEdit={onEdit} setOnEdit={setOnEdit} getProducts={getProducts} />
+      <Grid products={products} setProducts={setProducts} setOnEdit={setOnEdit} />
     </Container>
     <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
     
