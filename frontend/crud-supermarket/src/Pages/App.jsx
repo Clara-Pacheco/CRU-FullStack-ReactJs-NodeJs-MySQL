@@ -27,14 +27,17 @@ export function App() {
   useEffect(() => {
     getProducts()
   }, [setProducts])
+
   
   return (
   <>
+
     <Container>
       <Title>Produtos</Title>
       <Form onEdit={onEdit} setOnEdit={setOnEdit} getProducts={getProducts} />
       <Grid products={products} setProducts={setProducts} setOnEdit={setOnEdit} />
     </Container>
+
     <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
     
     </> 
