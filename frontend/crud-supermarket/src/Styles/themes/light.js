@@ -11,7 +11,7 @@ export const light = {
     SWITCHON: "#648DE5",
     SWITCHOFF: "#CDC392",
 
-    HEADER: "#304C89",
+    HEADER: "#9EB7E5",
     H2: "#000",
 
     WHITE:"#FFF",
