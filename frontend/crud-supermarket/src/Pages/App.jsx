@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react'
+import usePersistedState from '../utils/usePersistedState.js'
 
 import { Container, Title } from './App.js'
 
@@ -24,7 +25,7 @@ export function App() {
 
   const [products, setProducts] = useState([])
   const [onEdit, setOnEdit] = useState(null)
-  const [theme, setTheme] = useState(light)
+  const [theme, setTheme] = usePersistedState('theme',light)
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
